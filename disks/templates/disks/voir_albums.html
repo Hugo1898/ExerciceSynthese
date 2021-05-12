@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>voir_albums</title>
+</head>
+<body>
+<h1>Liste des albums</h1>
+    {% for album in albums %}
+        <h2> <a href="{% url "tracks" album.id %}" target="_blank" > {{ album.title }} </a> </h2>
+    {% endfor %}
+</body>
+</html>

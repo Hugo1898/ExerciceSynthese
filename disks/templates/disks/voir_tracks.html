@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>voir_tracks</title>
+</head>
+<body>
+<h1>Liste des tracks</h1>
+    {% for track in tracks %}
+        <h2> {{ track.name }} </h2>
+        Titre : {{ track.name|linebreaks }}<br/>
+        Auteur : {{ track.album.artist|linebreaks }}<br/>
+        Duree : {{ track.milliseconds|linebreaks }}<br/>
+        Prix : {{ track.unitPrice|linebreaks }}<br/>
+    {% endfor %}
+</body>
+</html>
