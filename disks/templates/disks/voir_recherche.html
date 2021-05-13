@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Liste des albums</title>
+    <title>Résultat de la recherche</title>
     <link rel="stylesheet" href="/static/disks/css/style.css" />
     <script src="/static/disks/js/script.js"></script>
 </head>
@@ -15,8 +15,8 @@
 
 <button onclick="getValue()">Recherche</button>
 
-<h1>Liste des albums :</h1>
-    {% for album in albums %}
+<h1>Albums correspondants à la recherche : " {{ search }} "</h1>
+    {% for album in search_result %}
         <h2> <a href="{% url "tracks" album.id %}" target="_blank" > {{ album.title }} </a> </h2>
     {% endfor %}
 

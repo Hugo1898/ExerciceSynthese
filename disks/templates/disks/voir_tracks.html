@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>voir_tracks</title>
+    <title>Liste des tracks</title>
 </head>
 <body>
 <h1>Liste des tracks</h1>
     {% for track in tracks %}
         <h2> {{ track.name }} </h2>
-        Titre : {{ track.name|linebreaks }}<br/>
-        Auteur : {{ track.album.artist|linebreaks }}<br/>
-        Duree : {{ track.milliseconds|linebreaks }}<br/>
-        Prix : {{ track.unitPrice|linebreaks }}<br/>
+        Titre : {{ track.name}}<br/>
+        Auteur : {{ track.album.artist}}<br/>
+        Durée : {% widthratio track.milliseconds 60000 1%} mins <br/>
+        Prix : {{ track.unitPrice}}<br/>
     {% endfor %}
 </body>
 </html>
